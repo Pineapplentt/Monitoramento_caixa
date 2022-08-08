@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    padding: 0;
+    
+}
+.container{
+    margin: auto;
+    display: flex;
+    width: 80%;
+    
+}
+.fundo{
+    background-color: #3080b0;
+    height: 90vh;
+    
+}   
+.home{
+    align-items: center;
+    display: flex;
+    width: 100%;
+    
+}
+.logo{
+    width: 15%;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    width: 100px;
+    list-style: none;
+    
+}
+.FundoNavbar{
+    background-color: white;
+    color: black;
+    
+}
+.banner {
+    padding-top: 10%;
+    height: 100%;
+    width: 60%;
+    color: white;
+    
+}
+.imagemBanner { 
+    width: 40%;
+    height: 100%;
+    padding-top: 2%;
+}
+
+
+.banner h2{
+    text-align: left;
+    padding-right: 2%;
+}
+.botaoSaibaMais{
+    background-color: white;
+    font-size: 90%;
+    padding: 1%;
+    border: 0;
+    border-radius: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 3%;
+}
+.FundoCards{
+    background-color: #062335;
+    display: flex;
+    
+}
+.FundoCards .container{
+    justify-content: space-around;
+    
+}
+.card{
+    margin-top: 5%;
+    color: white;
+    text-align: center;
+}
