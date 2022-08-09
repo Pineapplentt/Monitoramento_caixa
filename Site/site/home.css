@@ -14,6 +14,7 @@ body {
 .fundo {
     background-color: #3080b0;
     height: 90vh;
+    display: flex;
 
 }
 
@@ -92,28 +93,30 @@ body {
 .FundoCards {
     background-color: #062335;
     display: flex;
+    
 
 }
 
-.FundoCards .container {
-    justify-content: space-around;
 
-}
 
 .card {
     margin-top: 5%;
     color: white;
-    display: flex;
     flex-direction: column;
     text-align: center;
+    padding: 10px;
+    width: 33.3%;
 }
-.FundoCards {
-    align-items: center;
-}
+
 .imageCard{
     width: 200px;
     height: 170px;
     align-self: center;
-    
       
 }
+.fundoCultura{
+    background-color: #3080b0;
+    
+    
+}
+
