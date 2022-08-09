@@ -1,59 +1,77 @@
 body {
     margin: 0;
     padding: 0;
-    
+
 }
-.container{
+
+.container {
     margin: auto;
     display: flex;
     width: 80%;
-    
+
 }
-.fundo{
+
+.fundo {
     background-color: #3080b0;
     height: 90vh;
-    
-}   
-.home{
+
+}
+
+.fundo .container {
+    height: 100%;
+}
+
+.home {
     align-items: center;
     display: flex;
     width: 100%;
-    
+    font-size: 19px;
 }
-.logo{
+
+.logo {
     width: 15%;
 }
-.navbar{
+
+.navbar {
     display: flex;
     justify-content: space-between;
     width: 100px;
     list-style: none;
-    
 }
-.FundoNavbar{
+
+.navbarCadastro {
+    display: flex;
+    width: 100px;
+    list-style: none;
+    padding-left: 60%;
+}
+
+.FundoNavbar {
     background-color: white;
-    color: black;
-    
+    color: #062335;
+
 }
+
 .banner {
-    padding-top: 10%;
+    padding-top: 15%;
     height: 100%;
     width: 60%;
     color: white;
-    
+
 }
-.imagemBanner { 
+
+.imagemBanner {
     width: 40%;
     height: 100%;
-    padding-top: 2%;
+
 }
 
-
-.banner h2{
+.banner h2 {
     text-align: left;
     padding-right: 2%;
 }
-.botaoSaibaMais{
+
+.botaoSaibaMais {
     background-color: white;
     font-size: 90%;
     padding: 1%;
@@ -62,18 +80,40 @@ body {
     font-weight: bold;
     cursor: pointer;
     margin-top: 3%;
+    transition: 0.2s all
 }
-.FundoCards{
+
+.botaoSaibaMais:active {
+    transform: scale(0.98);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+
+}
+
+.FundoCards {
     background-color: #062335;
     display: flex;
-    
+
 }
-.FundoCards .container{
+
+.FundoCards .container {
     justify-content: space-around;
-    
+
 }
-.card{
+
+.card {
     margin-top: 5%;
     color: white;
+    display: flex;
+    flex-direction: column;
     text-align: center;
+}
+.FundoCards {
+    align-items: center;
+}
+.imageCard{
+    width: 200px;
+    height: 170px;
+    align-self: center;
+    
+      
 }
