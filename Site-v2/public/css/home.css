@@ -1,0 +1,155 @@
+body {
+    margin: 0;
+    padding: 0;
+
+}
+
+.container {
+    margin: auto;
+    display: flex;
+    width: 80%;
+
+}
+
+.fundo {
+    background-color: #3080b0;
+    height: 90vh;
+    display: flex;
+
+}
+
+.fundo .container {
+    height: 100%;
+}
+
+.home {
+    align-items: center;
+    display: flex;
+    width: 100%;
+    font-size: 19px;
+}
+
+.logo {
+    width: 15%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    width: 100px;
+    list-style: none;
+}
+
+.navbarCadastro {
+    display: flex;
+    width: 100px;
+    list-style: none;
+    padding-left: 60%;
+}
+
+.FundoNavbar {
+    background-color: white;
+    color: #062335;
+
+}
+
+.banner {
+    padding-top: 15%;
+    height: 100%;
+    width: 60%;
+    color: white;
+
+}
+
+.imagemBanner {
+    width: 40%;
+    height: 100%;
+
+}
+
+.banner h2 {
+    text-align: left;
+    padding-right: 2%;
+}
+
+.botaoSaibaMais {
+    background-color: white;
+    font-size: 90%;
+    padding: 1%;
+    border: 0;
+    border-radius: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 3%;
+    transition: 0.2s all
+}
+
+.botaoSaibaMais:active {
+    transform: scale(0.98);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+
+}
+
+.FundoCards {
+    background-color: #062335;
+    display: flex;
+    
+
+}
+
+
+
+.card {
+    margin-top: 5%;
+    color: white;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+    width: 33.3%;
+}
+
+.imageCard{
+    width: 200px;
+    height: 170px;
+    align-self: center;
+      
+}
+.fundoCultura{
+    background-color: #3080b0;
+    
+    
+}
+
+/*Area do cadastro*/
+.fundoCadastro{
+   background-color: #3080b0;
+    color: white;
+    padding: 10%;
+    display: flex;
+    flex-direction: column;
+    margin: 5%;
+    justify-content: center;
+    border-radius: 15px;
+    
+}
+.iptCadastro{
+    border-radius: 10px;
+    height: 5%;
+    width: 80%;
+    border: solid #062335;
+    
+}
+.btnCadastro{
+    width: 50%;
+    border-radius: 2px;
+    border: solid #062335;
+}
+.fundoTelaCadastro{
+    background-color: #062335;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    
+} 
+
+
