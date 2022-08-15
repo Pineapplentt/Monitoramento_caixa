@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    border: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #3080b0;
+    font-family: 'Noto Serif', serif;
+    height: 100vh;
+}
+
+.fundo {
+    display: flex;
+    height: 100%;
+    justify-content: right;
+    align-items: center;
+}
+
+.bannerLogo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+}
+
+.logoLink {
+    width: 60%;
+}
+
+img {
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter: drop-shadow(5px 5px 5px #222);
+}
+
+.bannerLogin {
+    background-color: #062335;
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background-color: #3080b0;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    padding: 30px;
+    height: 50%;
+}
+
+.email {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.senha {
+    display: flex;
+}
+
+span {
+    padding: 2px;
+}
+
+.input {
+    border-radius: 3px;
+    height: 20px;
+    width: 80%;
+    border: 0;
+}
+
+.botao {
+    width: 50%;
+    border-radius: 8px;
+    margin-top: 40px;
+}

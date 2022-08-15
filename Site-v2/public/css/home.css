@@ -29,10 +29,6 @@ body {
     font-size: 19px;
 }
 
-.logo {
-    width: 15%;
-}
-
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -42,7 +38,7 @@ body {
 
 .navbarCadastro {
     display: flex;
-    width: 100px;
+    width: 100%;
     list-style: none;
     padding-left: 60%;
 }
@@ -121,35 +117,3 @@ body {
 }
 
 /*Area do cadastro*/
-.fundoCadastro{
-   background-color: #3080b0;
-    color: white;
-    padding: 10%;
-    display: flex;
-    flex-direction: column;
-    margin: 5%;
-    justify-content: center;
-    border-radius: 15px;
-    
-}
-.iptCadastro{
-    border-radius: 10px;
-    height: 5%;
-    width: 80%;
-    border: solid #062335;
-    
-}
-.btnCadastro{
-    width: 50%;
-    border-radius: 2px;
-    border: solid #062335;
-}
-.fundoTelaCadastro{
-    background-color: #062335;
-    width: 60%;
-    display: flex;
-    justify-content: center;
-    
-} 
-
-
