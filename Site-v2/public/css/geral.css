@@ -1,7 +1,13 @@
 .logoLink {
-    width: 100%;
+    width: clamp(1rem, 20% + 10vw, 20rem);
 }
 
 .logo {
     width: 100%;
+}
+
+@media (min-width: 540px) {
+    .logoLink {
+        width: clamp(1rem, 20% + 10vw, 12rem);
+    }
 }
