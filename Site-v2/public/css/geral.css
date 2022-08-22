@@ -3,8 +3,10 @@
     --azulEscuro: #062335;
     --azulMedio: #2c6487;
     --azulClaro: #3080b0;
-    --branco: aliceblue;
-    --bege: wheat;
+    --alternativo: #262335;
+    --roxo: #8e82d3;
+    --branco: #f0f8ff;
+    --bege: #f5deb3;
     --shadow: 0 0px 20px 0px rgba(0, 0, 0, 0.37);
     --radius: 10px;
 }
@@ -13,11 +15,176 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+li {
+    text-decoration: none;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
 .logoLink {
     width: clamp(1rem, 20% + 10vw, 20rem);
 }
 
 .logo {
+    width: 100%;
+    transition: 400ms;
+}
+
+.logo:hover {
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter: drop-shadow(0px 0px 10px grey);
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--alternativo);
+    color: var(--branco);
+    padding: 50px;
+}
+
+.footer .retanguloFantasma {
+    background-color: #d2d1d4be;
+    width: 68%;
+    height: 80px;
+    margin-right: 40px;
+    margin-top: -100px;
+}
+
+.footer .retangulo {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--roxo);
+    width: 65%;
+    height: 40px;
+    padding: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-top: -80px;
+    align-items: center;
+    text-align: left;
+}
+
+.footer .retangulo .textos {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer .retangulo .textos .titulo {
+    color: var(--branco);
+}
+
+.footer .retangulo .textos .texto {
+    color: var(--alternativo);
+}
+
+.footer .botao {
+    background-color: #222;
+    color: var(--branco);
+    padding: 10px;
+}
+
+.footer li {
+    font-size: 80%;
+    opacity: 50%;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+.footer .itens {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 30px;
+    padding-top: 50px;
+    margin-left: 5%;
+}
+
+.footer .itens h6 {
+    display: flex;
+}
+
+.footer .itens h5 {
+    padding: 5px;
+}
+
+.footer .itens .item1 {
+    width: 35%;
+}
+
+.footer .itens .item2 {
+    width: 100%;
+}
+
+.footer .itens .item3 {
+    width: 100%;
+}
+
+.footer .itens .item4 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    transition: 400ms;
+}
+
+.footer .itens .item4 .imgs {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.item4 .github, .item4 .facebook, .item4 .instagram, .item4 .linkedin{
+    width: 30px;
+    height: 30px;
+    transition: 300ms;
+}
+
+.item4 .github {
+    background-image: url('../imgs/gitBlack.png');
+    background-size: 100%;
+}
+
+.item4 .facebook {
+    background-image: url('../imgs/facebookBlack.png');
+    background-size: 100%;
+}
+
+.item4 .instagram {
+    background-image: url('../imgs/instagramBlack.png');
+    background-size: 100%;
+}
+
+.item4 .linkedin {
+    background-image: url('../imgs/linkedinBlack.png');
+    background-size: 100%;
+}
+
+.item4 .github:hover {
+    background-image: url('../imgs/gitColor.png');
+}
+
+.item4 .facebook:hover {
+    background-image: url('../imgs/facebookColor.png');
+}
+
+.item4 .instagram:hover {
+    background-image: url('../imgs/instagramColor.png');
+}
+
+.item4 .linkedin:hover {
+    background-image: url('../imgs/linkedinColor.png');
+}
+
+.footer .itens .item4 img {
+    width: 30%;
+}
+
+.footer .logo {
     width: 100%;
 }
 
