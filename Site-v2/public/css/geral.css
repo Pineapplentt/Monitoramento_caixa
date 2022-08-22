@@ -1,7 +1,28 @@
+
+:root {
+    --azulEscuro: #062335;
+    --azulMedio: #2c6487;
+    --azulClaro: #3080b0;
+    --branco: aliceblue;
+    --bege: wheat;
+    --shadow: 0 0px 20px 0px rgba(0, 0, 0, 0.37);
+    --radius: 10px;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
 .logoLink {
-    width: 100%;
+    width: clamp(1rem, 20% + 10vw, 20rem);
 }
 
 .logo {
     width: 100%;
+}
+
+@media (min-width: 540px) {
+    .logoLink {
+        width: clamp(1rem, 20% + 10vw, 12rem);
+    }
 }

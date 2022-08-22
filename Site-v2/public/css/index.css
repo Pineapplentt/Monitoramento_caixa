@@ -1,6 +1,14 @@
-body {
+* {
     margin: 0;
     padding: 0;
+    box-sizing: 0;
+}
+
+
+body {
+    text-align: center;
+    min-height: 100vh;
+
 }
 
 .container {
@@ -9,82 +17,103 @@ body {
     width: 80%;
 }
 
-.align1 {
+
+.FundoNavbar {
+    background-color: white;
+    color: #062335;
+    height: 90%;
+    width: clamp(14rem, 100%, 100vw);
+}
+
+.home {
+    align-items: center;
+    display: flex;
+
+}
+
+.navLinks {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.login {
+    width: 20%;
+}
+
+.navbar,
+.login {
+    display: flex;
+    list-style: none;
+}
+
+.navbar li {
+    width: clamp(18vw, 2rem + 2vw, 22vw);
+    font-size: clamp(8px, 10px + 2vw, 25px);
+    padding: 1rem + 2vw;
+}
+
+.login li {
+    width: clamp(18vw, 2rem + 2vw, 22vw);
+    font-size: clamp(8px, 10px + 2vw, 25px);
+    padding: 1rem + 2vw;
+
+}
+
+.align1,
+.align2 {
     display: flex;
 }
 
 .fundo {
     background-color: #3080b0;
-    height: 90vh;
+    height: clamp(14vh, 110%, 100vh);
     display: flex;
     width: 70%;
-}
-
-.fundoImg {
-    background-color: #062335;
-    background-image: url(../imgs/caixaEletronico.png);
-    background-size: 100%;
-    width: 30%;
+    padding-bottom: 4%;
 }
 
 .fundo .container {
     height: 100%;
 }
 
-.home {
-    align-items: center;
-    display: flex;
-    width: 100%;
-    font-size: 19px;
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    width: 100px;
-    list-style: none;
-}
-
-.login{
-    display: flex;
-    width: 100%;
-    list-style: none;
-    padding-left: 60%;
-}
-
-.FundoNavbar {
-    background-color: white;
-    color: #062335;
+.container.banner {
+    padding: 5%;
 }
 
 .banner {
-    padding-top: 15%;
-    height: 100%;
+    padding-top: 8%;
+    padding-right: 1%;
     width: 60%;
     color: white;
-
-}
-
-.imagemBanner {
-    width: 40%;
-    height: 100%;
-
+    font-size: clamp(0.8rem, 0.8rem + 1vw, 3rem);
+    text-align: left;
 }
 
 .banner h2 {
+    padding-top: 5%;
     text-align: left;
     padding-right: 2%;
+    font-size: clamp(0.4rem, 0.8rem + 1vw, 2rem);
 }
 
 .botaoSaibaMais {
     background-color: white;
-    font-size: 90%;
-    padding: 1%;
+    font-size: clamp(0.4rem, 0.4rem + 1vw, 1rem);
+    padding: 3%;
     border: 0;
     border-radius: 15px;
     font-weight: bold;
     cursor: pointer;
-    margin-top: 3%;
+    margin-top: 5%;
     transition: 0.2s all
 }
 
@@ -94,10 +123,28 @@ body {
 
 }
 
-.FundoCards {
+.fundoImg {
     background-color: #062335;
-    display: flex;
+    background-image: url(../imgs/caixaEletronico.png);
+    background-size: 100%;
+    width: 30%;
 }
+
+.FundoCards {
+    display: flex;
+    flex-direction: column;
+    background-color: #062335;
+    align-items: center;
+}
+
+.FundoCards .container,
+.fundoCultura .container {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
 
 .card {
     margin-top: 5%;
@@ -105,19 +152,100 @@ body {
     flex-direction: column;
     text-align: center;
     padding: 10px;
-    width: 33.3%;
+    width: 80%;
 }
 
-.imageCard{
-    width: 200px;
-    height: 170px;
+.card h1 {
+    font-size: clamp(0.8rem, 0.8rem + 1vw, 3rem);
+    margin-bottom: 2%;
+}
+
+.card h2 {
+    font-size: clamp(0.8rem, 0.1rem + 0.9vw, 2rem);
+}
+
+.imageCard {
+    width: clamp(2rem, 2rem + 20vw, 9.8rem);
     align-self: center;
-      
-}
-.fundoCultura{
-    background-color: #3080b0;
-    
-    
 }
 
-/*Area do cadastro*/
+.fundoCultura {
+    background-color: #3080b0;
+}
+
+@media (min-width: 540px) {
+
+    .home {
+        align-items: center;
+        display: flex;
+    }
+
+    .navLinks {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+    }
+
+    .navbar {
+        display: flex;
+        flex-direction: row;
+        max-width: 25vw;
+    }
+
+    .login {
+        width: 20%;
+    }
+
+    /* cards */
+
+    .FundoCards {
+        display: flex;
+        flex-direction: row;
+        background-color: #062335;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    .FundoCards .container,
+    .fundoCultura .container {
+        padding: 2%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .card {
+        margin-top: 5%;
+        color: white;
+        flex-direction: column;
+        text-align: center;
+        padding: 2%;
+        width: 33.3%;
+    }
+
+    .imageCard {
+        width: 10.8rem;
+        height: 10rem;
+        align-self: center;
+        margin-top: 4%;
+    }
+
+    .card h1 {
+        font-size: clamp(1rem, 1.2rem + 1vw, 3rem);
+        margin-bottom: 5%;
+    }
+
+    .card h2 {
+        font-size: clamp(1rem, 0.8rem + 1vw, 2rem);
+        font-style: normal;
+    }
+
+    .fundoCultura {
+        background-color: #3080b0;
+    }
+}
