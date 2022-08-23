@@ -1,7 +1,9 @@
 <!DOCTYPE html>
+
 <html lang="pt">
 
 <head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,92 +14,192 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
 
     <title>Kash+ | Login</title>
+
 </head>
 
 <body>
+
     <div class="fundo">
+
         <div class="bannerLogo">
-            <a href="dashADM.html">dash administrador</a>
-            <a href="dashGerente.html">dash gerente</a>
-            <a href="dashTecnico.html">dash técnico</a>
+
+            <!--<a href="dashADM.html">dash administrador</a> 
+
+<a href="dashGerente.html">dash gerente</a> 
+
+<a href="dashTecnico.html">dash técnico</a> -->
+
             <div class="logoLink">
+
                 <a href="index.html">
+
                     <img class="logo" src="imgs/logoWhite.png" alt="">
+
                 </a>
+
             </div>
+
         </div>
+
         <div class="bannerLogin">
+
             <div class="card">
+
                 <h2>Seja bem-vindo!</h2>
 
-                <div class="email">
-                    <span>Email:</span><input class="input" id="ipt_email" type="email">
-                </div>
-                <div class="senha">
-                    <span>Senha:</span><input class="input" id="ipt_senha" type="password">
-                </div>
+                <span>
+
+
+
+
+                    <div class="email">
+
+                        <span>Email:</span><input class="input" id="ipt_email" type="email">
+
+                    </div>
+
+                    <div class="senha">
+
+                        <span>Senha:</span><input class="input" id="ipt_senha" type="password">
+
+                    </div>
+
+                </span>
+
+
+
 
                 <button class="botao" onclick="logar()">Entrar</button>
+
             </div>
+
         </div>
+
     </div>
+
+
+
 
 </body>
 
+
+
+
 </html>
+
 <script>
     function cadastrar() {
+
         var emailVar = ipt_email.value;
+
         var senhaVar = ipt_senha.value;
+
         var confirmacaoSenhaVar = ipt_confirmacao_senha.value;
-        // if (senhaVar.length < 8) {
-        //     alerert('Senha muito pequena')
-        //         return false;
-        // }
+
+        // if (senhaVar.length < 8) { 
+
+        // alerert('Senha muito pequena') 
+
+        // return false; 
+
+        // } 
+
+
+
 
         if (emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
+
             alert('Preencha todos os campo');
+
             return false;
+
         }
+
+
+
 
         if (emailVar.indexOf("@") == -1 || emailVar.indexOf(".com") == -1) {
+
             alert('Ops, e-mail inválido! Verifique e tente novamente.')
+
             return false;
+
         }
+
+
+
 
         if (senhaVar != confirmacaoSenhaVar) {
+
             alert('As senhas inseridas devem ser iguais para prosseguir!');
+
             return false;
+
         }
 
-        // Enviando o valor da nova input
+
+
+
+        // Enviando o valor da nova input 
+
         fetch("/usuarios/cadastrar", {
+
             method: "POST",
+
             headers: {
+
                 "Content-Type": "application/json"
+
             },
+
             body: JSON.stringify({
-                // crie um atributo que recebe o valor recuperado aqui
-                // Agora vá para o arquivo routes/usuario.js
+
+                // crie um atributo que recebe o valor recuperado aqui 
+
+                // Agora vá para o arquivo routes/usuario.js 
+
                 emailServer: emailVar,
+
                 senhaServer: senhaVar
+
             })
+
         }).then(function (resposta) {
+
+
+
 
             console.log("resposta: ", resposta);
 
+
+
+
             if (resposta.ok) {
+
                 alert('Seu cadastro foi realizado com sucesso')
+
                 setTimeout(() => {
+
                     window.location = "./login.html";
+
                 }, 3000);
+
             } else {
+
                 throw ("Houve um erro ao tentar realizar o cadastro!");
+
             }
+
         }).catch(function (resposta) {
+
             console.log(`#ERRO: ${resposta}`);
+
         });
 
+
+
+
         return false;
+
     }
 </script>

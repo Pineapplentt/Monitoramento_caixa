@@ -1,4 +1,3 @@
-
 :root {
     --azulEscuro: #062335;
     --azulMedio: #2c6487;
@@ -45,13 +44,14 @@ a {
     align-items: center;
     background-color: var(--alternativo);
     color: var(--branco);
-    padding: 50px;
+    padding: 2.8rem;
+    padding-top: 2.8rem;
 }
 
 .footer .retanguloFantasma {
     background-color: #d2d1d4be;
-    width: 68%;
-    height: 80px;
+    width: 73%;
+    height: 5rem;
     margin-right: 40px;
     margin-top: -100px;
 }
@@ -61,11 +61,11 @@ a {
     justify-content: space-between;
     background-color: var(--roxo);
     width: 65%;
-    height: 40px;
-    padding: 20px;
-    padding-left: 30px;
-    padding-right: 30px;
-    margin-top: -80px;
+    height: 2.5rem;
+    padding: 2rem;
+    padding-left: 1.8rem;
+    padding-right: 1.8rem;
+    margin-top: -5rem;
     align-items: center;
     text-align: left;
 }
@@ -73,10 +73,13 @@ a {
 .footer .retangulo .textos {
     display: flex;
     flex-direction: column;
+    
 }
 
 .footer .retangulo .textos .titulo {
     color: var(--branco);
+    padding: 2%;
+    font-size: clamp(0.4rem, 0.8rem + 1vw, 1rem);
 }
 
 .footer .retangulo .textos .texto {
@@ -86,23 +89,28 @@ a {
 .footer .botao {
     background-color: #222;
     color: var(--branco);
-    padding: 10px;
+    padding: 0.6rem;
+    height: 100%;
+    font-size: clamp(0.4rem, 0.4rem + 1vw, 1rem);
+    text-align: center;
 }
 
 .footer li {
     font-size: 80%;
     opacity: 50%;
-    padding-top: 4px;
-    padding-bottom: 4px;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
 }
 
 .footer .itens {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
-    padding: 30px;
-    padding-top: 50px;
+    padding: 1.8rem;
+    padding-top: 3.1rem;
     margin-left: 5%;
+    border: 1px solid rebeccapurple;
+    align-items: center;
 }
 
 .footer .itens h6 {
@@ -110,7 +118,7 @@ a {
 }
 
 .footer .itens h5 {
-    padding: 5px;
+    padding: 0.4rem;
 }
 
 .footer .itens .item1 {
@@ -138,9 +146,12 @@ a {
     width: 100%;
 }
 
-.item4 .github, .item4 .facebook, .item4 .instagram, .item4 .linkedin{
-    width: 30px;
-    height: 30px;
+.item4 .github,
+.item4 .facebook,
+.item4 .instagram,
+.item4 .linkedin {
+    width: 1.5rem;
+    height: 1.5rem;
     transition: 300ms;
 }
 
@@ -191,5 +202,161 @@ a {
 @media (min-width: 540px) {
     .logoLink {
         width: clamp(1rem, 20% + 10vw, 12rem);
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--alternativo);
+        color: var(--branco);
+        padding: 50px;
+    }
+
+    .footer .retanguloFantasma {
+        background-color: #d2d1d4be;
+        width: 68%;
+        height: 80px;
+        margin-right: 40px;
+        margin-top: -100px;
+    }
+
+    .footer .retangulo {
+        display: flex;
+        justify-content: space-between;
+        background-color: var(--roxo);
+        width: 65%;
+        height: 40px;
+        padding: 20px;
+        padding-left: 30px;
+        padding-right: 30px;
+        margin-top: -80px;
+        align-items: center;
+        text-align: left;
+    }
+
+    .footer .retangulo .textos {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer .retangulo .textos .titulo {
+        color: var(--branco);
+        width: 100%;
+        font-size: clamp(0.4rem, 2rem + 1vw,1rem);
+    }
+
+    .footer .retangulo .textos .texto {
+        color: var(--alternativo);
+    }
+
+    .footer .botao {
+        background-color: #222;
+        color: var(--branco);
+        padding: 10px;
+        text-align: center;
+    }
+
+    .footer li {
+        font-size: 80%;
+        opacity: 50%;
+        padding-top: 4px;
+        padding-bottom: 4px;
+    }
+
+    .footer .itens {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 30px;
+        padding-top: 50px;
+        margin-left: 5%;
+    }
+
+    .footer .itens h6 {
+        display: flex;
+    }
+
+    .footer .itens h5 {
+        padding: 5px;
+    }
+
+    .footer .itens .item1 {
+        width: 35%;
+    }
+
+    .footer .itens .item2 {
+        width: 100%;
+    }
+
+    .footer .itens .item3 {
+        width: 100%;
+    }
+
+    .footer .itens .item4 {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        transition: 400ms;
+    }
+
+    .footer .itens .item4 .imgs {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .item4 .github,
+    .item4 .facebook,
+    .item4 .instagram,
+    .item4 .linkedin {
+        width: 30px;
+        height: 30px;
+        transition: 300ms;
+    }
+
+    .item4 .github {
+        background-image: url('../imgs/gitBlack.png');
+        background-size: 100%;
+    }
+
+    .item4 .facebook {
+        background-image: url('../imgs/facebookBlack.png');
+        background-size: 100%;
+    }
+
+    .item4 .instagram {
+        background-image: url('../imgs/instagramBlack.png');
+        background-size: 100%;
+    }
+
+    .item4 .linkedin {
+        background-image: url('../imgs/linkedinBlack.png');
+        background-size: 100%;
+    }
+
+    .item4 .github:hover {
+        background-image: url('../imgs/gitColor.png');
+    }
+
+    .item4 .facebook:hover {
+        background-image: url('../imgs/facebookColor.png');
+    }
+
+    .item4 .instagram:hover {
+        background-image: url('../imgs/instagramColor.png');
+    }
+
+    .item4 .linkedin:hover {
+        background-image: url('../imgs/linkedinColor.png');
+    }
+
+    .footer .itens .item4 img {
+        width: 30%;
+    }
+
+    .footer .logo {
+        width: 100%;
     }
 }

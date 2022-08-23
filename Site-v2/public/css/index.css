@@ -77,7 +77,7 @@ body {
     background-color: #3080b0;
     height: clamp(14vh, 110%, 100vh);
     display: flex;
-    width: 70%;
+    width: 100%;
     padding-bottom: 4%;
 }
 
@@ -92,7 +92,7 @@ body {
 .banner {
     padding-top: 8%;
     padding-right: 1%;
-    width: 60%;
+    width: 90%;
     color: white;
     font-size: clamp(0.8rem, 0.8rem + 1vw, 3rem);
     text-align: left;
@@ -128,6 +128,7 @@ body {
     background-image: url(../imgs/caixaEletronico.png);
     background-size: 100%;
     width: 30%;
+    display: none;
 }
 
 .FundoCards {
@@ -165,12 +166,14 @@ body {
 }
 
 .imageCard {
+    
     width: clamp(2rem, 2rem + 20vw, 9.8rem);
     align-self: center;
 }
 
 .fundoCultura {
     background-color: #3080b0;
+    padding-bottom: 6rem;
 }
 
 @media (min-width: 540px) {
@@ -217,7 +220,6 @@ body {
         flex-direction: row;
         justify-content: center;
         align-items: flex-start;
-        padding-bottom: 100px;
     }
 
     .card {
@@ -249,4 +251,14 @@ body {
     .fundoCultura {
         background-color: #3080b0;
     }
+
+    .fundoImg {
+        background-color: #00869D;
+        background-image: url(../imgs/caixa.jpeg);
+        background-size: 100%;
+        width: 40%;
+        display: block;
+        background-repeat: no-repeat;
+    }
+    
 }
