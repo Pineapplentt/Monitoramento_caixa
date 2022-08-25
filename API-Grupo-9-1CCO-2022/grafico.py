@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt # Definindo um "apelido" para a biblioteca
 from matplotlib.animation import FuncAnimation
 
 #Importanto as funções responsáveis para conectar ao banco e fazer os inserts
-from conexao import criar_conexao, fechar_conexao
+from conexao import criar_conexao
 from comandoSql import insere_dadosHardware
 
 # Variável de conexão com  o banco, altere as informações necessárias como: host, usuario, senha e nome do banco para ficar de acordo com o Banco Criado na sua máquina
@@ -18,16 +18,18 @@ def definirGraficos(frame):
     consumoRAM.append(psutil.virtual_memory()[2]) # adicionando os valores capturados pelo psutil na lista valores
     conRAM = consumoRAM[-1] # Armazenando em uma variavel o último valor inserido no vetor de consumoRAM
     consumoRAM.remove(consumoRAM[0]) # remove o primeiro valor da lista
+
     consumoCPU.append(psutil.cpu_percent(interval=None))# adicionando os valores capturados pelo psutil na lista valores
     conCPU = consumoCPU[-1] # Armazenando em uma variavel o último valor inserido no vetor de consumoCPU
     consumoCPU.remove(consumoCPU[0]) # remove o primeiro valor da lista
+
+    dadosHardware = str(conCPU) + ',' + str(conRAM) + ');' # Criando uma varivel do tipo strig para passar como parâmetro para a função de inserir dados no banco. (aqui é para complementar o insert do arquivo comandosSql.py)
 
     graficosRAM.cla() # limpa os eixos
     graficosRAM.plot(consumoRAM, color='#b449de') # plota o gráfico
     graficosRAM.scatter(len(consumoRAM) - 1, consumoRAM[-1], color='#b449de') # marcador (bolinha) na posição atual do gráfico
     graficosRAM.title.set_text(f'Consumo de RAM - {consumoRAM[-1]}%') # título do gráfico
     graficosRAM.set_ylim(0, 100) # limite do eixo y
-    dadosHardware = str(conCPU) + ',' + str(conRAM) + ');' # Criando uma varivel do tipo strig para passar como parâmetro para a função de inserir dados no banco. (aqui é para complementar o insert do arquivo comandosSql.py)
     
     graficosCPU.cla() # limpa os eixos
     graficosCPU.plot(consumoCPU, color='#49a7de') # plota o gráfico
@@ -38,10 +40,12 @@ def definirGraficos(frame):
     # Criando um sistema que detecata quantas unidades de armazenamento tem na sua máquina e gerando um gráfico do tipo Pie = Torta/Pizza com a % de disco espaço e de espaço disponível
     i = 3
     cores = '#a5a8a8','#55cfed' # setando as cores que serão utilizadas no gráfico para ficarem estáticas.
+
+    #Este for serve para idenficar todas as partições da máquina e gerar os gráficos
     for dispositivo in dispositivos:
-        armzTotalDisco = round((psutil.disk_usage(f'{dispositivo.device}')[0]) / (10**9),2); # Capturando a capacidade total de armazenamento do disco
-        espacoUsadoDisco = round((psutil.disk_usage(f'{dispositivo.device}')[1]) / (10**9),2); # Capturando o espaço usado do disco
-        espacoLivreDisco = round((psutil.disk_usage(f'{dispositivo.device}')[2]) / (10**9),2); # Capturando o espaço disponível do disco
+        armzTotalDisco = round((psutil.disk_usage(f'{dispositivo.device}')[0]) / (10**9),2); # Capturando a capacidade total de armazenamento do disco e convertendo e bytes para Gb
+        espacoUsadoDisco = round((psutil.disk_usage(f'{dispositivo.device}')[1]) / (10**9),2); # Capturando o espaço usado do disco e convertendo e bytes para Gb
+        espacoLivreDisco = round((psutil.disk_usage(f'{dispositivo.device}')[2]) / (10**9),2); # Capturando o espaço disponível do disco e convertendo e bytes para Gb
 
         labels = f'Espaço Usado - {espacoUsadoDisco} Gb', f'Espaço Disponível - {espacoLivreDisco} Gb' # Definindo as lavels (Textos) da legenda
         sizes = [((espacoUsadoDisco/armzTotalDisco)*100), ((espacoLivreDisco/armzTotalDisco)*100)] # Definindo os tamanhos do gráfico de pizza em %
@@ -54,7 +58,7 @@ def definirGraficos(frame):
         graficosUnidArmz.axis('equal')  # Definindo a proporção de forma do gráficos para que as unidades de dados sejam as mesmas em todas as direções.
         
         i = i+1
-        insere_dadosHardware(con, dadosHardware)
+    insere_dadosHardware(con, dadosHardware)
 # cria uma lista com 10 zeros, esta lista será utilizada no eixo y gráfico
 consumoRAM = [0] * 10 
 consumoCPU = [0] * 10

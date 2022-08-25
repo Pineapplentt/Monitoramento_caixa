@@ -1,4 +1,4 @@
-import conexao
+
 
 def insere_dadosHardware (con, dadosHardware):
     cursor = con.cursor()
