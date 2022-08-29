@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+
+body {
+    text-align: center;
+    min-height: 100%;
+
+}
+
+
+.Banner {
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+}
+
+
+.Banner .fundoImagem {
+    height: 100vh;
+    width: 35%;
+}
+
+.imagemCaixa {
+    height: 100vh;
+    width: 100vh;
+    padding: 50px;
+}
+
+
+.ConteudoTela {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    width: 100%;
+}
+
+.ConteudoTela .containerTitulo {
+    background-color: #062335;
+    height: 15%;
+    width: 100%;
+    font-size: clamp(5rem, 100%, 100%);
+    color: white;
+    font-family: 'Noto Serif', 'serif';
+    font-weight: bold;
+    text-shadow: 0 0 5px black;
+}
+
+.ConteudoTela .containerConteudo {
+    background-color: #addfe2;
+    height: 85%;
+    width: 100%;
+}
