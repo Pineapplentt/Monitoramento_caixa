@@ -1,7 +1,8 @@
-import mysql.connector # Tem que baixar e importar a biblioteca para conectar no banco
+import mysql.connector #Importando a biblioteca responsável por conectar o python ao mysql local
 
-def criar_conexao (host, usuario, senha, nomeBanco):
-    return mysql.connector.connect(host=host, user=usuario, password=senha, database=nomeBanco, autocommit=True )
+# Autocommit serve para garantir que os comandos serão executados dentro do SQL
+def criar_conexao (host, usuario, senha, nomeDoBD):
+    return mysql.connector.connect(host=host, user=usuario, password=senha, database=nomeDoBD, autocommit=True )
 
 def fechar_conexao(con):
     return con.close()
