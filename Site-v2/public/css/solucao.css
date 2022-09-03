@@ -4,34 +4,31 @@
     box-sizing: 0;
 }
 
-
 body {
     text-align: center;
     min-height: 100%;
-
 }
-
 
 .Banner {
     height: 100vh;
     width: 100%;
-    background-color: black;
     display: flex;
     flex-direction: row;
 }
 
-
 .Banner .fundoImagem {
-    height: 100vh;
-    width: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 40%;
+    background-color: var(--alternativo);
 }
 
 .imagemCaixa {
-    height: 100vh;
-    width: 100vh;
+    width: 100%;
     padding: 50px;
 }
-
 
 .ConteudoTela {
     display: flex;
@@ -41,18 +38,103 @@ body {
 }
 
 .ConteudoTela .containerTitulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #062335;
     height: 15%;
     width: 100%;
-    font-size: clamp(5rem, 100%, 100%);
-    color: white;
-    font-family: 'Noto Serif', 'serif';
+    font-size: clamp(3rem, 100%, 100%);
+    color: var(--branco);
     font-weight: bold;
     text-shadow: 0 0 5px black;
 }
 
 .ConteudoTela .containerConteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     background-color: #addfe2;
     height: 85%;
     width: 100%;
+}
+
+.divisao1, .divisao2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+    width: 80%;
+    height: 40%;
+}
+
+.bloco1,
+.bloco2,
+.bloco3,
+.bloco4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    height: 80%;
+    box-shadow: var(--shadow);
+    transition: 400ms;
+    border-radius: var(--radius);
+}
+
+.bloco1,
+.bloco2,
+.bloco3,
+.bloco4 {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+
+.bloco1:hover {
+    width: 60%;
+    box-shadow: 0px 0px 20px 0px salmon;
+}
+
+.bloco2:hover {
+    width: 60%;
+    box-shadow: 0px 0px 20px 0px sandybrown;
+}
+
+.bloco3:hover {
+    width: 60%;
+    box-shadow: 0px 0px 20px 0px yellowgreen;
+}
+
+.bloco4:hover {
+    width: 60%;
+    box-shadow: 0px 0px 20px 0px white;
+}
+
+.bloco1 {
+    background-color: salmon;
+}
+
+.bloco2 {
+    background-color: sandybrown;
+}
+
+.bloco3 {
+    background-color: yellowgreen;
+}
+
+.bloco4 {
+    background-color: rgb(255, 255, 255);
+}
+
+.bloco1 img, .bloco2 img, .bloco3 img, .bloco4 img {
+    width: 20%;
+}
+
+.divisao1 .texto, .divisao2 .texto {
+    color: black;
+    text-align: left;
+    font-weight: 900;
+    padding: 10px;
 }

@@ -1,8 +1,0 @@
-Azul escuro - HEX : #062335
-RGB : 6, 35, 53
-HSL  : 202, 79%, 11%
-
-
-Azul claro - HEX : #3080b0
-RGB : 48, 128, 176
-HSL  : 202, 57%, 43%

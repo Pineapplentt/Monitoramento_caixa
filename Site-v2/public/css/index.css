@@ -11,60 +11,9 @@ body {
 
 }
 
-.container {
-    margin: auto;
-    display: flex;
-    width: 80%;
-}
-
-
-.FundoNavbar {
-    background-color: white;
-    color: #062335;
-    height: 90%;
-    width: clamp(14rem, 100%, 100vw);
-}
-
 .home {
     align-items: center;
     display: flex;
-
-}
-
-.navLinks {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-    align-items: center;
-}
-
-.navbar {
-    display: flex;
-    flex-direction: row;
-
-}
-
-.login {
-    width: 20%;
-}
-
-.navbar,
-.login {
-    display: flex;
-    list-style: none;
-}
-
-.navbar li {
-    width: clamp(18vw, 2rem + 2vw, 22vw);
-    font-size: clamp(8px, 10px + 2vw, 25px);
-    padding: 1rem + 2vw;
-}
-
-.login li {
-    width: clamp(18vw, 2rem + 2vw, 22vw);
-    font-size: clamp(8px, 10px + 2vw, 25px);
-    padding: 1rem + 2vw;
 }
 
 .align1,
@@ -114,7 +63,7 @@ body {
     font-weight: bold;
     cursor: pointer;
     margin-top: 5%;
-    transition: 0.2s all
+    transition: 0.2s all;
 }
 
 .botaoSaibaMais:active {
@@ -166,7 +115,6 @@ body {
 }
 
 .imageCard {
-    
     width: clamp(2rem, 2rem + 20vw, 9.8rem);
     align-self: center;
 }
@@ -177,29 +125,6 @@ body {
 }
 
 @media (min-width: 540px) {
-
-    .home {
-        align-items: center;
-        display: flex;
-    }
-
-    .navLinks {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        width: 100%;
-        align-items: center;
-    }
-
-    .navbar {
-        display: flex;
-        flex-direction: row;
-        max-width: 25vw;
-    }
-
-    .login {
-        width: 20%;
-    }
 
     /* cards */
 
@@ -244,8 +169,9 @@ body {
     }
 
     .card h2 {
-        font-size: clamp(1rem, 0.8rem + 1vw, 2rem);
+        font-size: clamp(1rem, 0.8rem + 0.3vw, 2rem);
         font-style: normal;
+        text-align: left;
     }
 
     .fundoCultura {

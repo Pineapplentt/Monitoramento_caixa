@@ -64,8 +64,8 @@ consumoCPU = [0] * 10
 # propriedades dos gráficos
 telaPrincipal = plt.figure(figsize=(7, 6), facecolor='#EEE') # cria a janela com o tamanho e a cor
 # criando os gráficos de CPU e RAM dentro da janela
-graficosRAM = plt.subplot(221)
-graficosCPU = plt.subplot(222)
+graficosRAM = plt.subplot(321)
+graficosCPU = plt.subplot(322)
 
 graficosRAM.axes.get_xaxis().set_visible(False) # tira a visualização dos dados do eixo x
 graficosRAM.set_facecolor('#DDD') # define a cor do gráfico
