@@ -73,6 +73,10 @@ body {
     flex-direction: row;
 }
 
+a {
+    color: #000;
+}
+
 .fundo {
     background-color: rgb(0, 132, 156);
     height: clamp(14vh, 110%, 100vh);
@@ -99,6 +103,8 @@ body {
 }
 
 .banner h2 {
+    font-style: normal;
+    font-weight: normal;
     padding-top: 5%;
     text-align: left;
     padding-right: 2%;
@@ -162,11 +168,13 @@ body {
 }
 
 .card h2 {
+    font-style: normal;
+    font-weight: normal;
     font-size: clamp(0.8rem, 0.1rem + 0.9vw, 2rem);
 }
 
 .imageCard {
-    
+
     width: clamp(2rem, 2rem + 20vw, 9.8rem);
     align-self: center;
 }
@@ -181,6 +189,10 @@ body {
     .home {
         align-items: center;
         display: flex;
+    }
+
+    a {
+        color: #000;
     }
 
     .navLinks {
@@ -245,6 +257,7 @@ body {
 
     .card h2 {
         font-size: clamp(1rem, 0.8rem + 1vw, 2rem);
+        font-weight: normal;
         font-style: normal;
     }
 
@@ -260,5 +273,5 @@ body {
         display: block;
         background-repeat: no-repeat;
     }
-    
+
 }
