@@ -11,23 +11,23 @@ body {
 
 .Banner {
     height: 100vh;
-    width: 100%;
+    width: 100vw;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 
 .Banner .fundoImagem {
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     height: 100%;
-    width: 40%;
+    width: 100%;
     background-color: var(--alternativo);
 }
 
 .imagemCaixa {
-    width: 100%;
-    padding: 50px;
+    width: 90%;
+    padding: 1rem;
 }
 
 .ConteudoTela {
@@ -42,12 +42,12 @@ body {
     justify-content: center;
     align-items: center;
     background-color: #062335;
-    height: 15%;
-    width: 100%;
+    height: 10rem;
+    width: 100vw;
     font-size: clamp(3rem, 100%, 100%);
     color: var(--branco);
     font-weight: bold;
-    text-shadow: 0 0 5px black;
+    text-shadow: 0 0 0.3rem black;
 }
 
 .ConteudoTela .containerConteudo {
@@ -56,15 +56,17 @@ body {
     align-items: center;
     justify-content: center;
     background-color: #addfe2;
-    height: 85%;
+    height: 100%;
     width: 100%;
 }
 
-.divisao1, .divisao2 {
+.divisao1,
+.divisao2 {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    padding: 10px;
+    padding: 1.6rem;
     width: 80%;
     height: 40%;
 }
@@ -74,13 +76,21 @@ body {
 .bloco3,
 .bloco4 {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 40%;
-    height: 80%;
+    width: 85%;
+    height: 90%;
     box-shadow: var(--shadow);
     transition: 400ms;
     border-radius: var(--radius);
+    margin-top: 1.2rem;
+    margin-bottom: 1.2rem;
+}
+
+.bloco3 {
+    margin-top: 4.8rem;
+
 }
 
 .bloco1,
@@ -89,27 +99,28 @@ body {
 .bloco4 {
     display: flex;
     flex-direction: column;
-    padding: 15px;
+    padding: 1rem;
 }
 
+
 .bloco1:hover {
-    width: 60%;
-    box-shadow: 0px 0px 20px 0px salmon;
+    width: 100%;
+    box-shadow: 0px 0px 1.25rem 0px salmon;
 }
 
 .bloco2:hover {
-    width: 60%;
-    box-shadow: 0px 0px 20px 0px sandybrown;
+    width: 100%;
+    box-shadow: 0px 0px 1.25rem 0px sandybrown;
 }
 
 .bloco3:hover {
-    width: 60%;
-    box-shadow: 0px 0px 20px 0px yellowgreen;
+    width: 100%;
+    box-shadow: 0px 0px 1.25rem 0px yellowgreen;
 }
 
 .bloco4:hover {
-    width: 60%;
-    box-shadow: 0px 0px 20px 0px white;
+    width: 100%;
+    box-shadow: 0px 0px 1.25rem 0px white;
 }
 
 .bloco1 {
@@ -128,13 +139,360 @@ body {
     background-color: rgb(255, 255, 255);
 }
 
-.bloco1 img, .bloco2 img, .bloco3 img, .bloco4 img {
-    width: 20%;
+
+
+.bloco1 img,
+.bloco2 img,
+.bloco3 img,
+.bloco4 img {
+    width: 40%;
+    padding: 0.2rem;
 }
 
-.divisao1 .texto, .divisao2 .texto {
+.divisao1 .texto,
+.divisao2 .texto {
     color: black;
     text-align: left;
     font-weight: 900;
-    padding: 10px;
+    padding: 0.6rem;
+    font-weight: normal;
+}
+
+.divisao1 .blocoTitulo,
+.divisao2 .blocoTitulo {
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+
+/* 770px 580 */
+
+@media (min-width: 580px) {
+
+    .Banner {
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+
+    }
+
+    .Banner .fundoImagem {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        height: 109vh;
+        width: 40%;
+        background-color: var(--alternativo);
+    }
+
+    .imagemCaixa {
+        width: 100%;
+        padding: 3.1rem;
+    }
+
+    .ConteudoTela {
+        display: flex;
+        flex-direction: column;
+        background-color: black;
+        width: 100%;
+    }
+
+    .ConteudoTela .containerTitulo {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        background-color: #062335;
+        height: 15%;
+        width: 100%;
+        font-size: clamp(3rem, 100%, 100%);
+        color: var(--branco);
+        font-weight: bold;
+        text-shadow: 0 0 0.3rem black;
+    }
+
+    .ConteudoTela .containerConteudo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #addfe2;
+        height: 100%;
+        width: 100%;
+    }
+
+    .divisao1,
+    .divisao2 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        padding: 0.6rem;
+        width: 80%;
+        height: 40%;
+    }
+
+    .bloco1,
+    .bloco2,
+    .bloco3,
+    .bloco4 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 35%;
+        height: clamp(14rem, 95%, 20rem);
+        box-shadow: var(--shadow);
+        transition: 400ms;
+        border-radius: var(--radius);
+
+
+    }
+
+    .bloco1,
+    .bloco2 {
+        margin-bottom: 4rem;
+
+    }
+
+    .bloco3,
+    .bloco4 {
+        margin-top: 4rem;
+
+    }
+
+    .bloco1,
+    .bloco2,
+    .bloco3,
+    .bloco4 {
+        display: flex;
+        flex-direction: column;
+        padding: 1.3rem;
+    }
+
+    .bloco1:hover {
+        width: 60%;
+        box-shadow: 0px 0px 1.25rem 0px salmon;
+    }
+
+    .bloco2:hover {
+        width: 60%;
+        box-shadow: 0px 0px 1.25rem 0px sandybrown;
+    }
+
+    .bloco3:hover {
+        width: 60%;
+        box-shadow: 0px 0px 1.25rem 0px yellowgreen;
+    }
+
+    .bloco4:hover {
+        width: 60%;
+        box-shadow: 0px 0px 1.25rem 0px white;
+    }
+
+    .bloco1 {
+        background-color: salmon;
+    }
+
+    .bloco2 {
+        background-color: sandybrown;
+    }
+
+    .bloco3 {
+        background-color: yellowgreen;
+    }
+
+    .bloco4 {
+        background-color: rgb(255, 255, 255);
+    }
+
+    .bloco1 img,
+    .bloco2 img,
+    .bloco3 img,
+    .bloco4 img {
+        width: 30%;
+    }
+
+    .divisao1 .texto,
+    .divisao2 .texto {
+        color: black;
+        text-align: left;
+        font-weight: 900;
+        padding: 0.6rem;
+        font-size: clamp(0.2rem, 88%, 2rem);
+        width: 100%;
+        font-weight: normal;
+    }
+
+
+
+    .divisao1 .blocoTitulo,
+    .divisao2 .blocoTitulo {
+        font-size: clamp(1.5rem, 100%, 3.5rem);
+        font-weight: bolder;
+        text-align: center;
+    }
+}
+
+
+@media (min-width: 770px) {
+
+    .Banner {
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+
+    }
+
+    .Banner .fundoImagem {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 109vh;
+        width: 40%;
+        background-color: var(--alternativo);
+    }
+
+    .imagemCaixa {
+        width: 100%;
+        padding: 3.1rem;
+    }
+
+    .ConteudoTela {
+        display: flex;
+        flex-direction: column;
+        background-color: black;
+        width: 100%;
+    }
+
+    .ConteudoTela .containerTitulo {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        background-color: #062335;
+        height: 15%;
+        width: 100%;
+        font-size: clamp(3rem, 100%, 100%);
+        color: var(--branco);
+        font-weight: bold;
+        text-shadow: 0 0 0.3rem black;
+    }
+
+    .ConteudoTela .containerConteudo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #addfe2;
+        height: 100%;
+        width: 100%;
+    }
+
+    .divisao1,
+    .divisao2 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        padding: 0.6rem;
+        width: 80%;
+        height: 40%;
+    }
+
+    .bloco1,
+    .bloco2,
+    .bloco3,
+    .bloco4 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40%;
+        height: clamp(8rem, 90%, 20rem);
+        box-shadow: var(--shadow);
+        transition: 400ms;
+        border-radius: var(--radius);
+
+    }
+
+    .bloco1,
+    .bloco2 {
+        margin-bottom: 4rem;
+    }
+
+    .bloco3,
+    .bloco4 {
+        margin-top: 4rem;
+
+    }
+
+    .bloco1,
+    .bloco2,
+    .bloco3,
+    .bloco4 {
+        display: flex;
+        flex-direction: column;
+        padding: 1.3rem;
+    }
+
+    .bloco1:hover {
+        width: 60%;
+        box-shadow: 0px 0px 1.25rem 0px salmon;
+    }
+
+    .bloco2:hover {
+        width: 60%;
+        box-shadow: 0px 0px 1.25rem 0px sandybrown;
+    }
+
+    .bloco3:hover {
+        width: 60%;
+        box-shadow: 0px 0px 1.25rem 0px yellowgreen;
+    }
+
+    .bloco4:hover {
+        width: 60%;
+        box-shadow: 0px 0px 1.25rem 0px white;
+    }
+
+    .bloco1 {
+        background-color: salmon;
+    }
+
+    .bloco2 {
+        background-color: sandybrown;
+    }
+
+    .bloco3 {
+        background-color: yellowgreen;
+    }
+
+    .bloco4 {
+        background-color: rgb(255, 255, 255);
+    }
+
+    .bloco1 img,
+    .bloco2 img,
+    .bloco3 img,
+    .bloco4 img {
+        width: 30%;
+    }
+
+    .divisao1 .texto,
+    .divisao2 .texto {
+        color: black;
+        text-align: left;
+        font-weight: 900;
+        padding: 0.6rem;
+        font-size: clamp(0.2rem, 88%, 2rem);
+        width: 100%;
+        font-weight: normal;
+    }
+
+    .divisao1 .blocoTitulo,
+    .divisao2 .blocoTitulo {
+        font-size: clamp(1.5rem, 100%, 3.5rem);
+        font-weight: bolder;
+        text-align: center;
+    }
 }
